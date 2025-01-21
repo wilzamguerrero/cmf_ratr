@@ -22,21 +22,21 @@
 
   <hr>
   
-  [![Commit activity](https://img.shields.io/github/commit-activity/t/Gourieff/comfyui-reactor-node/main?cacheSeconds=0)](https://github.com/Gourieff/comfyui-reactor-node/commits/main)
-  ![Last commit](https://img.shields.io/github/last-commit/Gourieff/comfyui-reactor-node/main?cacheSeconds=0)
-  [![Opened issues](https://img.shields.io/github/issues/Gourieff/comfyui-reactor-node?color=red)](https://github.com/Gourieff/comfyui-reactor-node/issues?cacheSeconds=0)
-  [![Closed issues](https://img.shields.io/github/issues-closed/Gourieff/comfyui-reactor-node?color=green&cacheSeconds=0)](https://github.com/Gourieff/comfyui-reactor-node/issues?q=is%3Aissue+is%3Aclosed)
-  ![License](https://img.shields.io/github/license/Gourieff/comfyui-reactor-node)
+  [![Commit activity](https://img.shields.io/github/commit-activity/t/Gourieff/ComfyUI-ReActor/main?cacheSeconds=0)](https://github.com/Gourieff/ComfyUI-ReActor/commits/main)
+  ![Last commit](https://img.shields.io/github/last-commit/Gourieff/ComfyUI-ReActor/main?cacheSeconds=0)
+  [![Opened issues](https://img.shields.io/github/issues/Gourieff/ComfyUI-ReActor?color=red)](https://github.com/Gourieff/ComfyUI-ReActor/issues?cacheSeconds=0)
+  [![Closed issues](https://img.shields.io/github/issues-closed/Gourieff/ComfyUI-ReActor?color=green&cacheSeconds=0)](https://github.com/Gourieff/ComfyUI-ReActor/issues?q=is%3Aissue+state%3Aclosed)
+  ![License](https://img.shields.io/github/license/Gourieff/ComfyUI-ReActor)
 
   English | [Русский](/README_RU.md)
 
-# ReActor Node for ComfyUI
+# ReActor Nodes for ComfyUI<br><sub><sup>-=SFW-Friendly=-</sup></sub>
 
 </div>
 
-### The Fast and Simple Face Swap Extension Node for ComfyUI, based on [ReActor](https://github.com/Gourieff/sd-webui-reactor) SD-WebUI Face Swap Extension
+### The Fast and Simple Face Swap Extension Nodes for ComfyUI, based on [blocked ReActor](https://github.com/Gourieff/comfyui-reactor-node) - now it has a nudity detector to avoid using this software with 18+ content
 
-> This Node goes without NSFW filter (uncensored, use it on your own [responsibility](#disclaimer)) 
+> By using this Node you accept and assume [responsibility](#disclaimer)) 
 
 <div align="center">
 
@@ -45,10 +45,6 @@
 
 ---
 
-</div>
-
-<div align="center">
-  <img src="https://github.com/Gourieff/Assets/blob/main/comfyui-reactor-node/uploads/demo.gif?raw=true" alt="demo" width="100%"/>
 </div>
 
 <a name="latestupdate">
@@ -63,8 +59,16 @@
 <img src="https://github.com/Gourieff/Assets/blob/main/comfyui-reactor-node/0.5.2-whatsnew-04.jpg?raw=true" alt="0.5.2-whatsnew-04" width="100%"/>
 
 You can download ReSwapper models here:
-https://huggingface.co/datasets/Gourieff/ReActor/tree/main/models<br>
+https://huggingface.co/datasets/Gourieff/ReActor/tree/main/models
 Just put them into the "models/reswapper" directory.
+
+### 0.5.2 <sub><sup>ALPHA3</sup></sub>
+
+- NSFW-detector to not violate [GitHub rules](https://docs.github.com/en/site-policy/acceptable-use-policies/github-misinformation-and-disinformation#synthetic--manipulated-media-tools)
+
+### 0.5.2 <sub><sup>ALPHA2</sup></sub>
+
+- Minor fixes
 
 ### 0.5.2 <sub><sup>ALPHA1</sup></sub>
 
@@ -75,7 +79,7 @@ Just put them into the "models/reswapper" directory.
 - Support of ORT CoreML and ROCM EPs, just install onnxruntime version you need
 - Install script improvements to install latest versions of ORT-GPU
 
-<img src="https://github.com/Gourieff/Assets/blob/main/comfyui-reactor-node/0.5.2-whatsnew-02.jpg?raw=true" alt="0.5.2-whatsnew-02" width="100%"/>
+<img src="https://github.com/Gourieff/Assets/blob/main/comfyui-reactor-node/0.5.2-whatsnew-02.jpg?raw=true" alt="0.5.2-whatsnew-02" width="50%"/>
 
 <details>
 	<summary><a>Previous versions</a></summary>
@@ -206,10 +210,10 @@ Thanks to everyone who finds bugs, suggests new features and supports this proje
    - OR only [VS C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) and select "Desktop Development with C++" under "Workloads -> Desktop & Mobile"
    - OR if you don't want to install VS or VS C++ BT - follow [this steps (sec. I)](#insightfacebuild)
 3. Go to the `extensions\sd-webui-comfyui\ComfyUI\custom_nodes`
-4. Open Console or Terminal and run `git clone https://github.com/Gourieff/comfyui-reactor-node`
+4. Open Console or Terminal and run `git clone https://github.com/Gourieff/ComfyUI-ReActor`
 5. Go to the SD WebUI root folder, open Console or Terminal and run (Windows users)`.\venv\Scripts\activate` or (Linux/MacOS)`venv/bin/activate`
 6. `python -m pip install -U pip`
-7. `cd extensions\sd-webui-comfyui\ComfyUI\custom_nodes\comfyui-reactor-node`
+7. `cd extensions\sd-webui-comfyui\ComfyUI\custom_nodes\ComfyUI-ReActor`
 8. `python install.py`
 9.  Please, wait until the installation process will be finished
 10. (From the version 0.3.0) Download additional facerestorers models from the link below and put them into the `extensions\sd-webui-comfyui\ComfyUI\models\facerestore_models` directory:<br>
@@ -232,11 +236,11 @@ https://huggingface.co/datasets/Gourieff/ReActor/tree/main/models/facerestore_mo
    - OR if you don't want to install VS or VS C++ BT - follow [this steps (sec. I)](#insightfacebuild)
 2. Choose between two options:
    - (ComfyUI Manager) Open ComfyUI Manager, click "Install Custom Nodes", type "ReActor" in the "Search" field and then click "Install". After ComfyUI will complete the process - please restart the Server.
-   - (Manually) Go to `ComfyUI\custom_nodes`, open Console and run `git clone https://github.com/Gourieff/comfyui-reactor-node`
-3. Go to `ComfyUI\custom_nodes\comfyui-reactor-node` and run `install.bat`
+   - (Manually) Go to `ComfyUI\custom_nodes`, open Console and run `git clone https://github.com/Gourieff/ComfyUI-ReActor`
+3. Go to `ComfyUI\custom_nodes\ComfyUI-ReActor` and run `install.bat`
 4. If you don't have the "face_yolov8m.pt" Ultralytics model - you can download it from the [Assets](https://huggingface.co/datasets/Gourieff/ReActor/blob/main/models/detection/bbox/face_yolov8m.pt) and put it into the "ComfyUI\models\ultralytics\bbox" directory
-<br>As well as one or both of "Sams" models from [here](https://huggingface.co/datasets/Gourieff/ReActor/tree/main/models/sams) - download (if you don't have them) and put into the "ComfyUI\models\sams" directory
-
+<br>
+As well as one or both of "Sams" models from [here](https://huggingface.co/datasets/Gourieff/ReActor/tree/main/models/sams) - download (if you don't have them) and put into the "ComfyUI\models\sams" directory
 5. Run ComfyUI and find there ReActor Nodes inside the menu `ReActor` or by using a search
 
 </details>
@@ -363,7 +367,7 @@ Remove the current ReActor Node from your workflow and add it again
 
 Try to clone with `--depth=1` (last commit only):
 
-     git clone --depth=1 https://github.com/Gourieff/comfyui-reactor-node
+     git clone --depth=1 https://github.com/Gourieff/ComfyUI-ReActor
 
 Then retrieve the rest (if you need):
 
