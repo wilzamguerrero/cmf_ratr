@@ -8,7 +8,7 @@ body:
       label: First, confirm
       description: Make sure you use the latest version of the ReActor extension and you have already searched to see if an issue already exists for the bug you encountered before you create a new Issue.
       options:
-        - label: I have read the [instruction](https://github.com/Gourieff/comfyui-reactor-node/blob/main/README.md) carefully
+        - label: I have read the [instruction](https://github.com/Gourieff/ComfyUI-ReActor/blob/main/README.md) carefully
           required: true
         - label: I have searched the existing issues
           required: true
